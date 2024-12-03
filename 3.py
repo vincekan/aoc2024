@@ -1,9 +1,9 @@
 """
 Part 1
-Read file in single line
-Use regex matching to extract all instances of mul(x,y) into list
-Split on ',' and slice out the unecessary chars
-Cast to int, multiply, sum list
+Read file in single line.
+Use regex matching to extract all instances of mul(x,y) into list.
+Split on ',' and slice out the unecessary chars.
+Cast to int, multiply, sum list.
 """
 
 import re;
@@ -15,9 +15,9 @@ print(sum([int(i.split(',')[0][4:]) * int(i.split(',')[1][:-1]) for i in a]))
 
 """
 Part 2
-Update regex to also find do() and don't()
-Iterate sequentially through, updating a running total (sum) when a flag (do) is 1
-Start with do = 1 to accept first mul(x,y) 
+Update regex to also find do() and don't().
+Iterate sequentially through, updating a running total (sum) when a flag (do) is 1.
+Start with do = 1 to accept first mul(x,y).
 """
 
 a = re.findall( r"mul\(\d+,\d+\)|do\(\)|don't\(\)", line)
