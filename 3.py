@@ -9,6 +9,7 @@ Cast to int, multiply, sum list
 import re;
 
 line = open("3input.txt", "r").read()
+
 a = re.findall( r"mul\(\d+,\d+\)", line)
 print(sum([int(i.split(',')[0][4:]) * int(i.split(',')[1][:-1]) for i in a]))
 
